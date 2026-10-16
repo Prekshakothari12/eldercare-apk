@@ -1,0 +1,1187 @@
+.modal-handle{width:48px;height:5px;border-radius:5px;background:#bbb;margin:0 auto 18px}/* modal size rules at end of file */.modal-handle{width:48px;height:5px;border-radius:5px;background:#bbb;margin:0 auto 18px}.alert-banner{background:var(--danger);color:#fff;padding:16px;border-radius:12px;animation:pulse 2s infinite}.progress{height:10px;background:#eee;border-radius:9px;overflow:hidden}.progress>span{display:block;height:100%;background:var(--success)}.list-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--primary-light);color:var(--primary-dark);font-weight:700}.chip{border:1px solid var(--border);background:#fff;border-radius:999px;padding:8px 14px}.chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(211,47,47,.35)}50%{box-shadow:0 0 0 10px rgba(211,47,47,0)}} 
+a.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+#scheme-status{scroll-margin-top:72px}
+
+/* Permission explain (once) */
+.perm-explain-overlay{position:fixed;inset:0;z-index:20000;background:rgba(15,23,42,.55);display:grid;place-items:center;padding:20px}
+.perm-explain-card{background:#fff;border-radius:20px;padding:24px 20px;max-width:360px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.2);text-align:center}
+.perm-explain-card .perm-icon{width:56px;height:56px;margin:0 auto 12px;border-radius:16px;background:var(--primary-light,#CCFBF1);color:var(--primary,#0D9488);display:grid;place-items:center;font-size:1.4rem}
+.perm-explain-card h2{margin:0 0 8px;font-size:1.2rem}
+.perm-explain-card p{margin:0 0 12px;color:var(--text-secondary,#64748B);font-size:.95rem;line-height:1.4}
+.perm-list{list-style:none;padding:0;margin:0 0 16px;text-align:left}
+.perm-list li{padding:8px 0;display:flex;align-items:center;gap:10px;font-size:.92rem}
+.perm-list li i{color:var(--primary,#0D9488);width:20px}
+.perm-explain-card .btn{width:100%;margin-top:8px}
+.perm-settings-hint{font-size:.85rem;margin:8px 0;padding:8px 10px;background:#F8FAFC;border-radius:10px}
+
+/* Compact Followed / Skipped meal buttons */
+.meal-track-actions{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.btn-meal{border:1px solid var(--border,#E2E8F0);background:#fff;color:var(--text-secondary,#64748B);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:600;min-height:32px;cursor:pointer;line-height:1.2}
+.btn-meal.meal-followed{background:#16A34A;color:#fff;border-color:#16A34A}
+.btn-meal.meal-skipped{background:#DC2626;color:#fff;border-color:#DC2626}
+.meal-track-card .meal-track-eat{font-size:.8rem;max-width:45%;text-align:right}
+.btn-sm{min-height:36px!important;padding:6px 12px!important;font-size:.85rem!important;width:auto!important}
+.caregiver-sos{background:var(--danger,#DC2626);color:#fff;margin-bottom:12px}
+.caregiver-booking .caregiver-party{margin:8px 0;font-size:.92rem}
+.caregiver-booking .caregiver-party p{margin:4px 0}
+
+/* Header logout — top-right plain icon, no box */
+.header-logout-btn{
+  width:40px;height:40px;border:0;border-radius:50%;
+  background:transparent;color:var(--primary-dark,#115E59);
+  display:grid;place-items:center;cursor:pointer;
+  font-size:1.15rem;flex:0 0 auto;margin-left:auto;
+  box-shadow:none;padding:0;
+}
+.header-logout-btn:hover{background:rgba(15,118,110,.1)}
+.caregiver-bar,.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding-left:16px !important;padding-right:16px !important;
+}
+.caregiver-bar .logo,.topbar .logo{min-width:0;flex:1}
+.senior-header .header-logout-btn,
+.senior-header .icon-btn.logout-btn{
+  background:transparent !important;color:#fff !important;
+  box-shadow:none !important;border:0 !important;
+}
+.senior-header .icon-btn.logout-btn:hover{background:rgba(255,255,255,.15) !important}
+
+/* 16px gap between cards everywhere */
+.container.helper-home,
+.helper-home,
+.caregiver-mode .container,
+.senior-mode .container,
+.senior-content{
+  display:flex;flex-direction:column;gap:16px;
+}
+.caregiver-mode .card,
+.helper-home .card,
+.senior-mode .card{
+  margin:0 !important;
+  padding:16px 18px !important;
+}
+.helper-home .section-title{margin:4px 0 0}
+.helper-stack{display:flex;flex-direction:column;gap:16px}
+
+
+/* Meal Followed / Skipped pills */
+.meal-track-card{padding:12px 14px !important}
+.meal-track-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.meal-track-info{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.meal-track-info strong{font-size:var(--fs-card-title,18px);line-height:1.3}
+.meal-track-eat{font-size:var(--fs-secondary,14px);line-height:1.4}
+.meal-track-actions{display:flex;gap:8px;flex:0 0 auto;align-items:center}
+.btn-meal{
+  border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;
+  min-height:30px;line-height:1.2;cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;border:1.5px solid transparent;
+  background:#fff;color:var(--text-secondary);
+}
+.btn-meal.meal-outline-green{border-color:#16A34A;color:#16A34A;background:#fff}
+.btn-meal.meal-outline-red{border-color:#EA580C;color:#EA580C;background:#fff}
+.btn-meal.meal-followed{background:#16A34A;color:#fff;border-color:#16A34A}
+.btn-meal.meal-skipped{background:#EA580C;color:#fff;border-color:#EA580C}
+
+/* Helper spacing */
+.helper-home .card{margin-bottom:0}
+.helper-home .section-title{margin:20px 0 12px;font-size:var(--fs-card-title,18px)}
+.helper-stack{display:flex;flex-direction:column;gap:16px}
+.helper-empty{text-align:center;padding:28px 20px !important}
+.helper-empty .empty-icon{font-size:2rem;color:var(--primary);margin-bottom:8px}
+.caregiver-booking{margin:0}
+
+/* Type scale defaults */
+body{font-size:var(--fs-body,16px);line-height:var(--line,1.5);color:var(--text-primary)}
+.muted,.text-secondary{font-size:var(--fs-secondary,14px);line-height:1.5}
+h1{font-size:var(--fs-heading,22px);line-height:1.3}
+h2,.section-title{font-size:var(--fs-card-title,18px);line-height:1.35}
+.btn{font-size:var(--fs-btn,16px);line-height:1.4}
+.bottom-nav button span{font-size:var(--fs-xs,12px) !important;line-height:1.3}
+.bottom-nav button{font-size:var(--fs-xs,12px)}
+
+/* Food meal cards */
+.meal-card{padding:14px 16px !important}
+.meal-card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.meal-icon{font-size:1.4rem}
+.meal-grid{display:grid;gap:8px}
+.meal-eat,.meal-avoid,.meal-why{font-size:var(--fs-secondary,14px);line-height:1.45}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;padding:2px 6px;border-radius:6px;margin-right:4px;vertical-align:middle}
+.tag.green{background:#DCFCE7;color:#166534}
+.tag.red{background:#FEE2E2;color:#991B1B}
+.tag.blue{background:#DBEAFE;color:#1D4ED8}
+.food-cond-chips{display:flex;flex-wrap:wrap;gap:8px}
+.food-cond-chips .chip input{margin-right:4px}
+.food-setup .filter-row{margin-bottom:8px}
+.stack{display:flex;flex-direction:column;gap:16px}
+a.call-card{text-decoration:none;color:inherit;cursor:pointer}
+a.call-card:active{opacity:.92}
+
+
+
+/* FORCE logout + call + avoid + meal-row (must be last) */
+.logout-btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  color: #ffffff !important;
+  font-size: 20px !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout-btn i, .logout-btn svg { color: #ffffff !important; fill: #ffffff; }
+.caregiver-mode .logout-btn,
+.caregiver-mode .logout-btn i { color: #0f766e !important; }
+.app-header, .topbar, .caregiver-bar, .senior-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.call-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  margin-bottom: 16px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.call-card a, .call-card h3, .call-card p { text-decoration: none !important; }
+.call-icon {
+  flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%;
+  background: #d9f3ee; color: #0f766e;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.call-text { flex: 1; min-width: 0; }
+.call-text h3 { margin: 0; font-size: 18px; color: #111827; }
+.call-text p { margin: 2px 0 0; font-size: 14px; color: #4b5563; }
+.call-btn {
+  flex: 0 0 auto; background: #0f766e; color: #fff !important;
+  text-decoration: none !important; font-weight: 600; font-size: 16px;
+  padding: 10px 20px; border-radius: 999px;
+}
+.avoid-card {
+  background: #fff; border-radius: 16px; border-left: 5px solid #dc2626;
+  padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 16px;
+}
+.avoid-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.avoid-header h3 { margin: 0; font-size: 18px; color: #111827; }
+.avoid-icon {
+  flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%;
+  background: #fee2e2; color: #dc2626;
+  display: flex; align-items: center; justify-content: center; font-size: 16px;
+}
+.avoid-list { display: flex; flex-direction: column; gap: 10px; }
+.avoid-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: #fef2f2; border-radius: 12px; padding: 10px 12px;
+}
+.avoid-dot {
+  flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%;
+  background: #dc2626; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 2px;
+}
+.avoid-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.avoid-text strong { font-size: 16px; color: #111827; }
+.avoid-text span { font-size: 14px; color: #4b5563; line-height: 1.4; }
+.meal-row {
+  background: #fff; border-radius: 14px; padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 12px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.meal-top { display: flex; align-items: flex-start; gap: 10px; }
+.meal-emoji { font-size: 22px; line-height: 1; }
+.meal-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.meal-info strong { font-size: 16px; color: #111827; }
+.meal-info span { font-size: 14px; color: #4b5563; line-height: 1.4; word-break: break-word; }
+.meal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.pill {
+  border: 1.5px solid; background: #fff;
+  border-radius: 999px; padding: 6px 14px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  -webkit-appearance: none; appearance: none;
+  outline: none; box-shadow: none;
+}
+.pill-follow { color: #15803d; border-color: #15803d; }
+.pill-skip { color: #c2410c; border-color: #c2410c; }
+.pill-follow.active { background: #15803d; color: #fff; }
+.pill-skip.active { background: #c2410c; color: #fff; }
+
+
+/* Medicines dose cards */
+.med-dose-card { padding: 14px 16px !important; }
+.med-dose-top { display: flex; align-items: flex-start; gap: 12px; }
+.med-dose-time {
+  flex: 0 0 auto; min-width: 64px; font-weight: 700; font-size: 16px;
+  color: var(--primary-dark, #115E59);
+}
+.med-dose-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.med-dose-info strong { font-size: 16px; color: #111827; }
+.med-meta { font-size: 13px; }
+.med-chip {
+  flex: 0 0 auto; border-radius: 999px; padding: 4px 10px;
+  font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.med-chip.taken, .med-status-taken { background: #DCFCE7; color: #166534; }
+.med-status-upcoming { background: #F1F5F9; color: #475569; }
+.med-status-due { background: #CCFBF1; color: #0F766E; }
+.med-status-missed { background: #FEE2E2; color: #B91C1C; }
+.med-dose-card.med-status-due { border-left: 4px solid #0F766E; }
+.med-dose-card.med-status-missed { border-left: 4px solid #DC2626; }
+.med-dose-card.med-status-taken { border-left: 4px solid #16A34A; }
+.med-dose-card.med-status-upcoming { border-left: 4px solid #94A3B8; }
+.med-taken-btn { width: 100%; margin-top: 10px; min-height: 40px; }
+.med-summary { margin: 0 0 8px; font-size: 14px; color: #475569; }
+.med-dose-list { gap: 12px; }
+.alert-card {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: #fff; border-radius: 14px; padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08); margin-bottom: 12px;
+  border-left: 4px solid #D97706;
+}
+.alert-card.alert-expired { border-left-color: #DC2626; }
+.alert-card.alert-stock { border-left-color: #D97706; }
+.alert-card.alert-expiring { border-left-color: #F59E0B; }
+.alert-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #FEF3C7; color: #B45309;
+  display: flex; align-items: center; justify-content: center;
+}
+.alert-expired .alert-icon { background: #FEE2E2; color: #DC2626; }
+.med-page h1 { margin: 0 0 8px; }
+.med-page .section-title { margin: 16px 0 10px; font-size: 18px; }
+
+
+/* === Layout: page content gaps === */
+.page-content, .container, .senior-content, .helper-home, main.container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  padding: 16px !important;
+  box-sizing: border-box;
+}
+.page { padding-top: 0; }
+.senior-mode .page { padding-top: 72px; }
+.caregiver-mode .page { padding-top: 56px; }
+.card, .dose-card, .hero-card, .alert-card {
+  margin: 0 !important;
+  text-align: left;
+  padding: 16px !important;
+  box-sizing: border-box;
+}
+
+/* === Logout button — final override === */
+.logout-btn {
+  all: unset !important;
+  box-sizing: border-box !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+  flex: 0 0 auto !important;
+}
+.logout-btn i { color: #fff !important; }
+.caregiver-mode .logout-btn,
+.topbar .logout-btn {
+  background: rgba(15,118,110,.12) !important;
+  color: #0f766e !important;
+}
+.caregiver-mode .logout-btn i,
+.topbar .logout-btn i { color: #0f766e !important; }
+button.logout-btn, .btn.logout-btn { background: rgba(255,255,255,.18) !important; border: none !important; box-shadow: none !important; }
+
+/* === Dose cards === */
+.dose-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+  margin-bottom: 0 !important;
+}
+.dose-time { flex: 0 0 64px; font-weight: 600; color: #0f766e; font-size: 14px; }
+.dose-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.dose-info strong { font-size: 16px; color: #111827; }
+.dose-info span { font-size: 14px; color: #374151; }
+.dose-info small { font-size: 13px; color: #6b7280; }
+.dose-side { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.dose-chip {
+  border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.dose-chip.med-status-upcoming, .dose-chip.upcoming { background: #F1F5F9; color: #475569; }
+.dose-chip.med-status-due, .dose-chip.due { background: #CCFBF1; color: #0F766E; }
+.dose-chip.med-status-missed, .dose-chip.missed { background: #FEE2E2; color: #B91C1C; }
+.dose-chip.taken, .dose-chip.med-status-taken { background: #DCFCE7; color: #166534; }
+.dose-taken-btn { min-height: 32px !important; padding: 6px 14px !important; font-size: 13px !important; border-radius: 999px !important; width: auto !important; }
+
+/* === Call hero same as next med === */
+.hero-card, .call-hero, .today-meds {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: linear-gradient(135deg, #ECFDF5, #CCFBF1) !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06) !important;
+  border: 0 !important;
+}
+.hero-ic {
+  flex: 0 0 48px; width: 48px; height: 48px; border-radius: 14px;
+  background: #0f766e; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.hero-body { flex: 1; min-width: 0; }
+.hero-body small { display: block; font-size: 12px; color: #0f766e; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
+.hero-body h2 { margin: 2px 0; font-size: 18px; color: #111827; }
+.hero-body p { margin: 0; font-size: 14px; color: #4b5563; }
+.call-btn {
+  flex: 0 0 auto; background: #0f766e; color: #fff !important; text-decoration: none !important;
+  font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px;
+}
+
+/* === Bottom nav 6 tabs === */
+.bottom-nav {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: space-around !important;
+  height: auto !important;
+  min-height: 64px;
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px)) !important;
+}
+.bottom-nav button {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  font-size: 12px !important;
+  padding: 4px 2px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #6b7280 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.bottom-nav button span {
+  font-size: 11px !important;
+  line-height: 1.1 !important;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bottom-nav button i { font-size: 18px !important; }
+.bottom-nav button.active {
+  color: #0f766e !important;
+  background: #CCFBF1 !important;
+  border-radius: 12px !important;
+}
+
+/* SOS above nav */
+.floating-sos {
+  bottom: calc(72px + 16px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+/* Alert cards gap */
+.alert-card { margin-bottom: 0 !important; }
+
+
+/* ========== FINAL OVERRIDE (must win) ========== */
+#app { max-width: 480px; margin: 0 auto; position: relative; }
+
+.page-content, .container, .senior-content, .helper-home, main.container {
+  padding: 16px 16px 120px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  box-sizing: border-box;
+}
+.senior-mode .page-content, .senior-mode .container, .senior-mode .senior-content {
+  padding-top: 16px !important;
+}
+.caregiver-mode .page-content, .caregiver-mode .container, .caregiver-mode .helper-home {
+  padding-top: 12px !important;
+}
+
+.card, .hero, .alert-box, .dose-card, .call-card, .hero-card {
+  margin: 0 !important;
+  padding: 16px !important;
+  border-radius: 16px !important;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  text-align: left;
+}
+.page-title, h1 { font-size: 22px !important; }
+.section-title, h2 { font-size: 18px !important; }
+body, .card, .dose-info span { font-size: 16px; }
+small, .muted { font-size: 14px; }
+
+/* Logout */
+.logout-btn {
+  all: unset !important;
+  box-sizing: border-box !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.2) !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  margin-left: auto !important;
+  font-size: 18px !important;
+  flex: 0 0 auto !important;
+}
+.logout-btn i { color: #fff !important; }
+.caregiver-mode .logout-btn, .topbar .logout-btn {
+  background: rgba(15,118,110,.12) !important;
+  color: #0f766e !important;
+}
+.caregiver-mode .logout-btn i, .topbar .logout-btn i { color: #0f766e !important; }
+
+/* Overlay / bottom sheet inside app */
+.overlay, .modal-backdrop {
+  position: fixed !important;
+  top: 0 !important; bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: min(100%, 480px) !important;
+  background: rgba(0,0,0,.45) !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  margin: 0 !important;
+}
+.sheet, .modal {
+  width: 100% !important;
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+  background: #fff !important;
+  border-radius: 24px 24px 0 0 !important;
+  padding: 20px 16px 28px !important;
+  margin: 0 !important;
+}
+
+/* Toasts inside frame */
+.toast {
+  position: fixed !important;
+  top: 70px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: min(92%, 440px) !important;
+  z-index: 2000 !important;
+  background: #111827 !important;
+  color: #fff !important;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2) !important;
+  text-align: center;
+  font-size: 14px;
+}
+.toast.error { background: #b91c1c !important; }
+
+/* Alert boxes */
+.alert-box {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  border-left: 5px solid !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.alert-box.warn { background: #fffbeb !important; border-color: #f59e0b !important; }
+.alert-box.danger { background: #fef2f2 !important; border-color: #dc2626 !important; }
+.alert-box .alert-icon {
+  flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #fef3c7; color: #b45309;
+}
+.alert-box.danger .alert-icon { background: #fee2e2; color: #dc2626; }
+.alert-text { display: flex; flex-direction: column; gap: 2px; }
+.alert-text strong { font-size: 16px; }
+.alert-text span { font-size: 14px; color: #4b5563; }
+
+/* Dose cards */
+.dose-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+}
+.dose-time { flex: 0 0 68px; font-weight: 600; color: #0f766e; font-size: 14px; }
+.dose-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.dose-info strong { font-size: 16px; color: #111827; }
+.dose-info span { font-size: 14px; color: #4b5563; }
+.dose-side { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.status-chip {
+  padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.status-chip.taken { background: #dcfce7; color: #15803d; }
+.status-chip.missed { background: #fee2e2; color: #b91c1c; }
+.status-chip.due { background: #ccfbf1; color: #0f766e; }
+.status-chip.upcoming { background: #e5e7eb; color: #4b5563; }
+.dose-taken-btn {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  padding: 6px 14px; border-radius: 999px; background: #0f766e; color: #fff;
+  font-size: 13px; font-weight: 600;
+}
+
+/* Medicine all-list */
+.med-all-name { display: block; font-size: 16px; margin-bottom: 2px; }
+.med-all-dose { display: block; font-size: 14px; color: #4b5563; margin-bottom: 8px; }
+.med-detail-rows { display: flex; flex-direction: column; gap: 4px; }
+.med-detail-row { font-size: 14px; }
+.med-label { color: #6b7280; }
+
+/* Call card as link */
+a.call-card, a.call-card:visited, a.call-card:hover, a.call-card:active {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  color: #111827 !important;
+  background: linear-gradient(135deg, #ECFDF5, #CCFBF1) !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06) !important;
+}
+a.call-card *, .call-card * { text-decoration: none !important; color: inherit; font-style: normal; }
+.call-icon {
+  flex: 0 0 48px; width: 48px; height: 48px; border-radius: 14px;
+  background: #0f766e; color: #fff !important;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.call-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.call-text small { font-size: 12px; color: #0f766e !important; font-weight: 600; text-transform: uppercase; }
+.call-text strong { font-size: 18px; color: #111827 !important; }
+.call-text em { font-size: 13px; color: #4b5563 !important; font-style: normal !important; }
+.call-pill {
+  margin-left: auto; background: #0f766e; color: #fff !important;
+  padding: 8px 18px; border-radius: 999px; font-weight: 600; font-size: 14px;
+}
+
+/* Records */
+.records-title-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 16px;
+}
+.records-title-row h1 { margin: 0; }
+.upload-pill {
+  height: 40px !important; min-height: 40px !important;
+  padding: 0 16px !important; font-size: 14px !important;
+  border-radius: 999px !important; display: inline-flex !important;
+  align-items: center; gap: 6px; white-space: nowrap;
+}
+.empty-records { text-align: center; padding: 28px 20px !important; }
+.empty-records .empty-icon { font-size: 28px; color: #0f766e; margin-bottom: 8px; }
+
+/* Food pills */
+.meal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.pill {
+  all: unset !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  border: 1.5px solid !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  background: #fff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+.pill-follow { color: #15803d !important; border-color: #15803d !important; }
+.pill-skip { color: #c2410c !important; border-color: #c2410c !important; }
+.pill-follow.active { background: #15803d !important; color: #fff !important; }
+.pill-skip.active { background: #c2410c !important; color: #fff !important; }
+.meal-row { margin-bottom: 12px !important; }
+
+/* Demo collapsed */
+.demo { margin-top: 12px; font-size: 13px; }
+.demo summary { cursor: pointer; color: #0f766e; font-weight: 600; list-style: none; }
+.demo summary::-webkit-details-marker { display: none; }
+.demo .chip, .demo-chips .chip {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  padding: 4px 10px; font-size: 12px; border-radius: 999px;
+  background: #ccfbf1; color: #0f766e; margin: 4px 4px 0 0;
+  display: inline-block; font-weight: 600;
+}
+
+/* Helper task builders */
+.task-checks { display: flex; flex-wrap: wrap; gap: 8px; }
+.check-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-radius: 999px; background: #f1f5f9;
+  font-size: 14px; cursor: pointer;
+}
+.check-chip input { margin: 0; }
+.item-builder { margin-top: 8px; }
+.item-add-row { display: flex; gap: 8px; margin-top: 8px; }
+.item-add-row input { flex: 1; }
+.item-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.item-list li {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 0; border-bottom: 1px solid #e5e7eb; font-size: 14px;
+}
+.item-remove { all: unset; cursor: pointer; color: #b91c1c; font-size: 18px; padding: 0 6px; }
+.booking-cat { margin: 8px 0; }
+.booking-cat strong { display: block; margin-bottom: 4px; }
+.item-check { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 14px; }
+
+.helper-pick { gap: 12px; }
+.helper-pick-card{
+  width:100%; text-align:left; cursor:pointer;
+  border:2px solid var(--border); background:#fff;
+  box-shadow:var(--shadow);
+}
+.helper-pick-card.selected{
+  border-color:var(--primary);
+  background:var(--primary-light);
+}
+.helper-pick-row{gap:12px;align-items:center}
+.helper-pick-info{flex:1;min-width:0}
+.helper-pick-info p{margin:2px 0 0}
+.helper-meta{margin:0;font-weight:600;color:var(--primary-dark);font-size:var(--fs-secondary)}
+.helper-tick{color:var(--border);font-size:1.2rem;flex:0 0 auto}
+.helper-pick-card.selected .helper-tick{color:var(--primary)}
+.helper-book-form .btn-primary{width:100%;min-height:48px}
+.check-chip:has(input:checked){
+  background:var(--primary); color:#fff;
+}
+.booking-card .booking-actions{gap:8px;flex-wrap:wrap;margin-top:10px}
+.booking-cancel{color:var(--danger)!important}
+.badge.warning{background:var(--warning-light);color:var(--warning)}
+.badge.success{background:var(--success-light);color:var(--success)}
+.badge.danger{background:var(--danger-light);color:var(--danger)}
+.badge.blue{background:var(--primary-light);color:var(--primary-dark)}
+.helper-avatar{width:48px;height:48px;border-radius:14px;background:var(--primary-light);color:var(--primary-dark);display:grid;place-items:center;font-size:1.2rem;flex:0 0 auto}
+
+/* Bottom nav safe */
+.bottom-nav { z-index: 50; }
+.floating-sos { bottom: calc(80px + env(safe-area-inset-bottom,0px)) !important; }
+
+
+/* ===== App-column overlays only (final) ===== */
+#app, #login-screen {
+  position: relative !important;
+  max-width: 480px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Dimmed backdrop: only as wide as the app column */
+.overlay,
+.modal-backdrop,
+.app-overlay,
+.sos-modal,
+.sos-family-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: min(100vw, 480px) !important;
+  max-width: 480px !important;
+  margin: 0 !important;
+  background: rgba(0,0,0,.45) !important;
+  z-index: 10000 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.sheet,
+.modal,
+.sos-senior-modal,
+.sos-family-card {
+  width: 100% !important;
+  max-width: 480px !important;
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+  background: #fff !important;
+  border-radius: 24px 24px 0 0 !important;
+  padding: 20px 16px 28px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Toasts: top of app column */
+.toast {
+  position: fixed !important;
+  top: 70px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: min(92%, 440px) !important;
+  max-width: 440px !important;
+  z-index: 10001 !important;
+  background: #111827 !important;
+  color: #fff !important;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2) !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  box-sizing: border-box !important;
+}
+.toast.error { background: #b91c1c !important; }
+
+/* Call card whole-link */
+a.call-card, a.call-card:visited, a.call-card:hover, a.call-card:active {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  color: #111827 !important;
+  background: linear-gradient(135deg, #ECFDF5, #CCFBF1) !important;
+  border-radius: 16px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06) !important;
+}
+a.call-card * { text-decoration: none !important; color: inherit; font-style: normal !important; }
+.call-icon {
+  flex: 0 0 48px; width: 48px; height: 48px; border-radius: 14px;
+  background: #0f766e; color: #fff !important;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.call-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.call-text small { font-size: 12px; color: #0f766e !important; font-weight: 600; text-transform: uppercase; }
+.call-text strong { font-size: 18px; color: #111827 !important; }
+.call-text em { font-size: 13px; color: #4b5563 !important; }
+.call-pill {
+  margin-left: auto; background: #0f766e; color: #fff !important;
+  padding: 8px 18px; border-radius: 999px; font-weight: 600; font-size: 14px;
+  text-decoration: none !important;
+}
+
+/* Demo collapsed */
+.demo { margin-top: 12px; font-size: 13px; }
+.demo summary { cursor: pointer; color: #0f766e; font-weight: 600; list-style: none; }
+.demo summary::-webkit-details-marker { display: none; }
+.demo .chip, .demo-chips .chip {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  padding: 4px 10px; font-size: 12px; border-radius: 999px;
+  background: #ccfbf1; color: #0f766e; margin: 4px 4px 0 0;
+  display: inline-block; font-weight: 600;
+}
+
+/* Med detail rows */
+.med-all-name { display: block; font-size: 16px; }
+.med-all-dose { display: block; font-size: 14px; color: #4b5563; margin: 2px 0 8px; }
+.med-detail-rows { display: flex; flex-direction: column; gap: 4px; }
+.med-detail-row { font-size: 14px; }
+.med-label { color: #6b7280; }
+.dose-card { display: flex; align-items: center; gap: 12px; }
+.dose-info small { display: none; } /* no stock/expiry on dose cards */
+
+/* Alert boxes */
+.alert-box {
+  display: flex; align-items: flex-start; gap: 12px;
+  border-left: 5px solid; border-radius: 16px; padding: 14px 16px;
+}
+.alert-box.warn { background: #fffbeb; border-color: #f59e0b; }
+.alert-box.danger { background: #fef2f2; border-color: #dc2626; }
+
+
+/* ===== Call cards (senior home) ===== */
+.call-card-list { display: flex; flex-direction: column; gap: 12px; }
+.call-card, .call-card:visited, .call-card:hover, .call-card:active {
+  display: flex !important; align-items: center !important; gap: 12px !important;
+  background: linear-gradient(135deg, #ecfdf5, #ccfbf1) !important;
+  border-radius: 16px !important; padding: 14px 16px !important;
+  text-decoration: none !important; color: #111827 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+}
+.call-card * { text-decoration: none !important; font-style: normal !important; color: inherit !important; }
+.call-icon { flex: 0 0 48px !important; width: 48px !important; height: 48px !important; border-radius: 14px !important; background: #0f766e !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; font-size: 22px !important; color: #fff !important; }
+.call-text { display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important; }
+.call-text small { font-size: 13px !important; color: #4b5563 !important; }
+.call-text strong { font-size: 18px !important; color: #111827 !important; }
+.call-sub { font-size: 13px !important; color: #4b5563 !important; }
+.call-pill { margin-left: auto !important; flex: 0 0 auto !important; background: #0f766e !important; color: #fff !important;
+  padding: 8px 18px !important; border-radius: 999px !important; font-weight: 600 !important; font-size: 14px !important; }
+
+/* ===== Meal list (food page) ===== */
+.meal-list { display: flex; flex-direction: column; gap: 10px; padding: 0; }
+.meal-row { display: flex !important; align-items: center !important; gap: 12px !important; background: #fff !important; border-radius: 14px !important;
+  padding: 10px 12px !important; box-shadow: 0 2px 8px rgba(0,0,0,.08) !important; }
+.meal-badge { flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%; background: #ccfbf1;
+  color: #0f766e; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.meal-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.meal-info strong { font-size: 15px; color: #111827; }
+.meal-info span { font-size: 13px; color: #4b5563; line-height: 1.3; word-break: break-word; }
+.meal-actions { flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px; }
+button.pill, .pill { all: unset !important; box-sizing: border-box !important; cursor: pointer !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  gap: 5px !important; padding: 4px 12px !important; border-radius: 999px !important;
+  border: 1.5px solid !important; font-size: 12px !important; font-weight: 600 !important; background: #fff !important; }
+.pill-follow { color: #15803d !important; border-color: #15803d !important; }
+.pill-skip { color: #c2410c !important; border-color: #c2410c !important; }
+.pill-follow.active { background: #15803d !important; color: #fff !important; }
+.pill-skip.active { background: #c2410c !important; color: #fff !important; }
+
+/* ===== Stock / expiry alert boxes ===== */
+.alert-list { display: flex; flex-direction: column; gap: 12px; }
+.alert-box { display: flex !important; align-items: flex-start !important; gap: 12px !important; padding: 14px 16px !important;
+  border-radius: 14px !important; border-left: 5px solid !important; box-shadow: 0 2px 8px rgba(0,0,0,.08) !important; margin: 0 !important; }
+.alert-box.warn { background: #fffbeb !important; border-color: #f59e0b !important; }
+.alert-box.danger { background: #fef2f2 !important; border-color: #dc2626 !important; }
+.alert-icon { flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.alert-box.warn .alert-icon { background: #fef3c7; color: #b45309; }
+.alert-box.danger .alert-icon { background: #fee2e2; color: #dc2626; }
+.alert-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.alert-text strong { font-size: 16px; color: #111827; }
+.alert-text span { font-size: 14px; color: #4b5563; }
+
+
+/* ===== Stock alerts (final) ===== */
+.stock-alert-list, .alert-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.stock-alert {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding: 14px 16px !important;
+  border-radius: 14px !important;
+  border-left: 5px solid !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+  margin: 0 !important;
+  background: #fff;
+}
+.stock-warn { background: #fffbeb !important; border-left-color: #f59e0b !important; }
+.stock-danger { background: #fef2f2 !important; border-left-color: #dc2626 !important; }
+.stock-icon {
+  flex: 0 0 36px !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+}
+.stock-warn .stock-icon { background: #fef3c7 !important; color: #b45309 !important; }
+.stock-danger .stock-icon { background: #fee2e2 !important; color: #dc2626 !important; }
+.stock-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+.stock-text strong { font-size: 16px !important; color: #111827 !important; display: block !important; }
+.stock-text span { font-size: 14px !important; color: #4b5563 !important; display: block !important; }
+
+/* Hide broken plain-text leftover alert-box styles if any still in DOM */
+.alert-box { display: flex !important; align-items: flex-start !important; gap: 12px !important; }
+
+
+/* ===== Call box (senior home — matches Today's Medicines card) ===== */
+.call-box-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.call-box, .call-box:visited, .call-box:hover, .call-box:active {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: linear-gradient(135deg, #ecfdf5, #ccfbf1) !important;
+  border-radius: 20px !important;
+  padding: 16px 18px !important;
+  text-decoration: none !important;
+  color: #111827 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+}
+.call-box * { text-decoration: none !important; font-style: normal !important; color: inherit !important; }
+.call-box-icon {
+  flex: 0 0 56px !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 16px !important;
+  background: #0f766e !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+}
+.call-box-text { display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important; }
+.call-box-text small { font-size: 13px !important; color: #4b5563 !important; }
+.call-box-text strong { font-size: 20px !important; color: #111827 !important; font-weight: 700 !important; }
+
+
+/* Call card = same as Today's Medicines, whole card clickable */
+a.hero-card.call-hero-link,
+a.hero-card.call-hero-link:visited,
+a.hero-card.call-hero-link:hover,
+a.hero-card.call-hero-link:active {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 0 16px !important;
+  padding: 18px 20px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #ECFEFF, #CCFBF1) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+  text-decoration: none !important;
+  color: #111827 !important;
+  cursor: pointer !important;
+}
+a.hero-card.call-hero-link * {
+  text-decoration: none !important;
+  font-style: normal !important;
+  color: inherit !important;
+}
+a.hero-card.call-hero-link .hero-ic {
+  width: 56px !important;
+  height: 56px !important;
+  flex: 0 0 56px !important;
+  border-radius: 16px !important;
+  background: #0f766e !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.5rem !important;
+}
+a.hero-card.call-hero-link .hero-body small {
+  display: block !important;
+  font-size: 13px !important;
+  color: #4b5563 !important;
+}
+a.hero-card.call-hero-link .hero-body h2 {
+  margin: 2px 0 !important;
+  font-size: 18px !important;
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+a.hero-card.call-hero-link .hero-body p {
+  margin: 0 !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+}
+
+/* Family stock alerts always as boxes */
+.stock-alert-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+
+
+/* ===== Popup size: content-based, app-column only (final) ===== */
+.overlay,
+.modal-backdrop,
+.app-overlay,
+.sos-modal,
+.sos-family-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 0 !important;
+  background: rgba(0,0,0,.45) !important;
+  z-index: 10000 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.sheet,
+.modal,
+.sos-senior-modal,
+.sos-family-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 85vh !important;
+  max-height: 85dvh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: #fff !important;
+  border-radius: 24px 24px 0 0 !important;
+  box-sizing: border-box !important;
+  padding: 20px 16px calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+  margin: 0 !important;
+  flex: 0 1 auto !important;
+}
+
+.toast {
+  position: fixed !important;
+  top: calc(70px + env(safe-area-inset-top, 0px)) !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: fit-content !important;
+  max-width: min(440px, calc(100% - 32px)) !important;
+  z-index: 10001 !important;
+  box-sizing: border-box !important;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  background: #111827 !important;
+  color: #fff !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2) !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+.toast.error { background: #b91c1c !important; }
+
+
+/* Senior call card — force teal box (matches medicine card) */
+a.senior-call-card,
+a.senior-call-card:link,
+a.senior-call-card:visited,
+a.senior-call-card:hover,
+a.senior-call-card:active {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 0 16px !important;
+  padding: 18px 20px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #ECFEFF, #CCFBF1) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08) !important;
+  text-decoration: none !important;
+  color: #111827 !important;
+}
+a.senior-call-card * {
+  text-decoration: none !important;
+  color: inherit !important;
+  font-style: normal !important;
+}
+
+
+/* === POPUPS: content-sized, app-column only === */
+.overlay, .modal-backdrop, .app-overlay, .sos-modal, .sos-family-overlay {
+  position: fixed !important; top: 0 !important; bottom: 0 !important;
+  left: 50% !important; right: auto !important; transform: translateX(-50%) !important;
+  width: 100% !important; max-width: 480px !important; margin: 0 !important;
+  background: rgba(0,0,0,.45) !important; z-index: 10000 !important;
+  display: flex !important; align-items: flex-end !important; justify-content: center !important;
+  box-sizing: border-box !important;
+}
+.sheet, .modal, .sos-senior-modal, .sos-family-card {
+  width: 100% !important; max-width: 100% !important; height: auto !important;
+  max-height: 85vh !important; max-height: 85dvh !important;
+  overflow-y: auto !important; overflow-x: hidden !important;
+  background: #fff !important; border-radius: 24px 24px 0 0 !important;
+  box-sizing: border-box !important;
+  padding: 20px 16px calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+  margin: 0 !important; flex: 0 1 auto !important;
+}
+.toast {
+  position: fixed !important; top: calc(70px + env(safe-area-inset-top, 0px)) !important;
+  left: 50% !important; right: auto !important; transform: translateX(-50%) !important;
+  width: fit-content !important; max-width: min(440px, calc(100% - 32px)) !important;
+  z-index: 10001 !important; box-sizing: border-box !important;
+  padding: 12px 16px !important; border-radius: 12px !important;
+  background: #111827 !important; color: #fff !important; text-align: center !important;
+  font-size: 14px !important; box-shadow: 0 4px 16px rgba(0,0,0,.2) !important;
+  white-space: normal !important; word-break: break-word !important;
+}
+.toast.error { background: #b91c1c !important; }
+
+
+/* ===== Senior/family spacing: no huge empty gap under header ===== */
+.senior-mode .page {
+  padding-top: 72px !important; /* room for fixed header only */
+}
+.senior-mode .senior-content,
+.senior-mode main.container,
+.senior-mode .container {
+  padding: 16px 16px 120px !important; /* 16px under header, not 88px more */
+}
+.senior-mode .page-content,
+.senior-mode .med-page {
+  padding: 0 !important; /* body already padded by senior-content */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.senior-mode .med-page h1 {
+  margin: 0 0 4px !important;
+  font-size: 22px !important;
+}
+.senior-mode .med-dose-list,
+.senior-mode .stack {
+  gap: 12px !important;
+}
+.senior-mode .dose-card {
+  margin-bottom: 0 !important;
+}
+
+/* Family medicines same idea if double-padded */
+.page-content.med-page {
+  gap: 12px;
+}
+
+
+/* ===== Family/Helper: small gap under header (not a big blank) ===== */
+.caregiver-mode .page {
+  padding-top: 56px !important; /* fixed bar height only */
+  padding-bottom: 80px !important;
+}
+.caregiver-mode .container,
+.caregiver-mode main.container,
+.caregiver-mode .page-content,
+.caregiver-mode .helper-home {
+  padding: 12px 16px 100px !important; /* small gap under bar */
+}
+.caregiver-mode .stock-alert-list {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+.caregiver-mode .family-quick {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+/* ===== Helper registered badge & ratings (genuine only) ===== */
+.helper-registered-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:12px;font-weight:600;color:var(--primary-dark);
+  background:var(--primary-light);border-radius:999px;
+  padding:2px 8px;margin:2px 4px 2px 0;white-space:nowrap;
+}
+.helper-rating{font-size:13px;font-weight:600;color:var(--text-primary)}
+.helper-rating.muted{font-weight:500;color:var(--text-secondary)}
+.helper-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:4px}
+.helper-pick-info .helper-meta{margin-top:4px}
+.rate-star-btn{transition:transform .12s ease,color .12s ease}
+.rate-stars-row{user-select:none}

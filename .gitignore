@@ -1,0 +1,28 @@
+# Dependencies (recreated with `npm install`)
+node_modules/
+
+# Android / Gradle build output (recreated on build)
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+*.apk
+*.aab
+
+# Machine-specific files
+android/local.properties
+android/.idea/
+.idea/
+.vscode/
+*.iml
+
+# Signing keys and secrets — never commit these
+*.jks
+*.keystore
+.env
+.env.*
+
+# OS junk
+.DS_Store
+Thumbs.db

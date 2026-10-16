@@ -1,0 +1,50 @@
+[
+ {
+  "name": "Senior Citizens Savings Scheme",
+  "description": "Post Office savings account for ages 60+ with regular interest paid every quarter.",
+  "category": "Finance",
+  "url": "https://www.indiapost.gov.in/"
+ },
+ {
+  "name": "Jeevan Pramaan",
+  "description": "Submit your pension life certificate digitally, without visiting the bank.",
+  "category": "Pension",
+  "url": "https://jeevanpramaan.gov.in/"
+ },
+ {
+  "name": "Ayushman Bharat Digital Mission",
+  "description": "Free ABHA health ID to keep your health records digitally.",
+  "category": "Health",
+  "url": "https://abdm.gov.in/"
+ },
+ {
+  "name": "Pradhan Mantri Jan Dhan Yojana",
+  "description": "Zero-balance bank account with RuPay card and accident cover.",
+  "category": "Finance",
+  "url": "https://pmjdy.gov.in/"
+ },
+ {
+  "name": "Post Office Monthly Income Scheme",
+  "description": "Post Office account that pays a fixed monthly income.",
+  "category": "Finance",
+  "url": "https://www.indiapost.gov.in/"
+ },
+ {
+  "name": "Pradhan Mantri Suraksha Bima Yojana",
+  "description": "Accident insurance for ages 18 to 70 at a very low yearly premium.",
+  "category": "Health",
+  "url": "https://jansuraksha.gov.in/"
+ },
+ {
+  "name": "Income Tax Senior Citizen Benefits",
+  "description": "Higher tax exemption and special deductions for senior citizens.",
+  "category": "Finance",
+  "url": "https://www.incometax.gov.in/"
+ },
+ {
+  "name": "Elderline 14567",
+  "description": "Free helpline 14567 for seniors: information, guidance, emotional support and help in case of abuse.",
+  "category": "Legal",
+  "url": "https://socialjustice.gov.in/"
+ }
+]

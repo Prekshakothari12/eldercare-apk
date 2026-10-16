@@ -1,0 +1,30 @@
+{
+  "diabetes": {
+    "eat": ["Leafy vegetables", "Dal and beans", "Whole grains", "Unsweetened curd", "Vegetable daliya", "Moong chilla"],
+    "avoid": ["Sugary drinks", "Sweets", "Refined flour", "Sweetened cornflakes", "Deep-fried snacks"]
+  },
+  "high BP": {
+    "eat": ["Bananas", "Oats", "Low-salt dal", "Fresh vegetables", "Buttermilk (chaas)", "Cucumber"],
+    "avoid": ["Pickles", "Papad", "Packaged salty snacks", "Excess fried snacks", "Extra table salt"]
+  },
+  "heart": {
+    "eat": ["Oats", "Nuts in small portions", "Fish or dal", "Fresh fruit", "Light vegetable soup"],
+    "avoid": ["Trans fats", "Deep-fried food", "Processed meats", "Heavy cream curries"]
+  },
+  "cholesterol": {
+    "eat": ["Oats porridge", "Roasted chana", "Fresh fruit", "Dal", "Vegetables"],
+    "avoid": ["Deep-fried food", "Butter-heavy dishes", "Processed meats", "Sugary desserts"]
+  },
+  "kidney": {
+    "eat": ["Lauki sabzi", "Light khichdi", "Controlled-salt vegetables", "Warm water"],
+    "avoid": ["High-salt pickles", "Excess protein load", "Coconut water in excess", "Processed snacks"]
+  },
+  "arthritis": {
+    "eat": ["Turmeric milk (unsweetened)", "Fatty fish", "Leafy greens", "Calcium-rich foods"],
+    "avoid": ["Excess sugar", "Ultra-processed foods", "Too much salt"]
+  },
+  "general": {
+    "eat": ["Seasonal fruit", "Vegetables", "Whole grains", "Water", "Dal"],
+    "avoid": ["Excess fried food", "Sugary drinks", "Tobacco and alcohol"]
+  }
+}

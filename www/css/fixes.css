@@ -1,0 +1,254 @@
+/* ElderCare — final layout fixes. Loaded LAST so it wins over older overrides. */
+:root{--hdr-senior:96px;--hdr-bar:60px;--gutter:16px;--nav-h:64px}
+
+/* ---- Language switcher: sits inside the header, never covers buttons ---- */
+.senior-actions,.bar-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.language-switcher.in-header{position:static!important;top:auto!important;right:auto!important;z-index:auto!important;
+  min-height:36px!important;padding:2px!important;box-shadow:none!important;flex:0 0 auto;background:rgba(255,255,255,.96)!important}
+.language-switcher.in-header button{min-width:34px!important;min-height:32px!important;font-size:14px!important;padding:0 6px!important}
+.language-switcher.in-header span{padding:0 2px!important;font-size:14px!important}
+.caregiver-bar .logout-btn,.senior-actions .logout-btn,.senior-actions .icon-btn{flex:0 0 auto}
+
+/* ---- Headers: fixed height + content starts right below them ---- */
+.senior-header{box-sizing:border-box!important;min-height:var(--hdr-senior)!important;align-items:center!important;
+  padding:12px var(--gutter) 14px!important;gap:8px!important}
+.senior-header .greeting{min-width:0;flex:1 1 auto}
+.senior-header .greeting strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.caregiver-bar,.topbar{box-sizing:border-box!important;min-height:var(--hdr-bar)!important;padding:8px var(--gutter)!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important}
+.senior-mode .page{padding-top:calc(var(--hdr-senior) + 8px)!important;padding-bottom:calc(var(--nav-h) + 24px)!important}
+.caregiver-mode .page{padding-top:calc(var(--hdr-bar) + 8px)!important;padding-bottom:calc(var(--nav-h) + 24px)!important}
+
+/* ---- One gutter, one gap: no double padding from nested wrappers ---- */
+.senior-mode .container,.senior-mode .senior-content,.senior-mode main.container,
+.caregiver-mode .container,.caregiver-mode main.container{
+  padding:8px var(--gutter) calc(var(--nav-h) + 96px)!important;
+  display:flex!important;flex-direction:column!important;gap:16px!important}
+.container .page-content,.container .helper-home,.container .med-page,.container .senior-content,
+.senior-mode .page-content,.caregiver-mode .page-content,.caregiver-mode .helper-home{
+  padding:0!important;display:flex!important;flex-direction:column!important;gap:16px!important}
+.container>*,.page-content>*{margin-top:0!important;margin-bottom:0!important}
+.container h1,.container h2.section-title,.page-content h1{margin:0!important}
+.container .row.between{gap:12px}
+.card{margin:0}
+
+/* ---- Bottom nav / SOS never cover content or each other ---- */
+.bottom-nav{height:var(--nav-h)!important;z-index:50!important}
+.senior-mode .floating-sos{bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom,0px))!important;z-index:60!important}
+.toast{top:calc(var(--hdr-bar) + 12px)!important}
+
+/* ---- Modals / SOS sheets stay above everything and are scrollable ---- */
+.modal-backdrop,.overlay,.app-overlay,.sos-modal,.sos-family-overlay{z-index:10000!important}
+.modal,.sheet{max-height:85dvh!important;overflow-y:auto!important;padding:20px var(--gutter) 28px!important}
+.modal .stack,.modal form{gap:14px!important}
+.modal h2{margin:0 0 12px!important}
+.form-field input,.form-field select,.form-field textarea{box-sizing:border-box}
+
+/* ---- Overlay position (the real reason sheets/SOS/Add/Upload were invisible) ---- */
+.modal-backdrop,.overlay,.app-overlay,.sos-modal,.sos-family-overlay{
+  position:fixed!important;top:0!important;bottom:0!important;left:50%!important;right:auto!important;
+  transform:translateX(-50%)!important;width:min(100vw,430px)!important;max-width:430px!important;
+  display:flex!important;align-items:flex-end!important;justify-content:center!important}
+
+/* empty SOS slot added an extra 16px gap under the header */
+#sos-slot:empty,.sos-slot-fixed:empty{display:none!important}
+
+/* ===== Spacing round 2 ===== */
+/* Senior home: one 16px gap between cards (margins were stacking on top of the flex gap) */
+.senior-mode main.container>*,.senior-mode .senior-content>*{margin-top:0!important;margin-bottom:0!important}
+.senior-mode .feature-grid,.senior-mode .grid-home{gap:12px!important}
+
+/* Food: "Foods to avoid completely" — air between items */
+.avoid-card{margin-top:16px!important;padding:16px!important}
+.avoid-header{margin-bottom:14px!important}
+.avoid-list{display:flex!important;flex-direction:column!important;gap:12px!important}
+.avoid-item{margin:0!important;padding:12px!important}
+.food-eat-card,.meal-card{margin:0!important}
+
+/* Food: "Mark meals today" — compact row, text left, small icon+label buttons right */
+.meal-list{display:flex!important;flex-direction:column!important;gap:10px!important}
+.meal-list .meal-row{display:flex!important;flex-direction:row!important;align-items:center!important;
+  text-align:left!important;gap:10px!important;padding:10px 12px!important;margin:0!important;min-height:0!important;height:auto!important}
+.meal-row .meal-badge{flex:0 0 32px!important;width:32px!important;height:32px!important;margin:0!important;font-size:14px!important}
+.meal-row .meal-info{flex:1 1 auto!important;min-width:0!important;align-items:flex-start!important;text-align:left!important;gap:1px!important}
+.meal-row .meal-info strong{font-size:15px!important;line-height:1.25}
+.meal-row .meal-info span{font-size:13px!important;line-height:1.3}
+.meal-row .meal-actions{flex:0 0 auto!important;display:flex!important;flex-direction:column!important;gap:6px!important;align-items:stretch!important;justify-content:center!important;margin:0!important}
+.meal-row .pill{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:6px!important;
+  min-height:28px!important;height:28px!important;padding:0 10px!important;font-size:12px!important;line-height:1!important;white-space:nowrap!important;margin:0!important;width:auto!important}
+.meal-row .pill i{font-size:11px;width:12px;text-align:center}
+
+/* Schemes: even rhythm between title, search, chips, hint and button */
+.schemes-page{display:flex!important;flex-direction:column!important;gap:14px!important;padding-bottom:0!important}
+.schemes-page>*{margin:0!important}
+.schemes-page .sn-search{margin:0!important}
+.sn-chips{display:flex!important;gap:8px!important;overflow-x:auto!important;padding:0 0 2px!important;margin:0!important;scrollbar-width:none;-ms-overflow-style:none}
+.sn-chips::-webkit-scrollbar{display:none!important;height:0}
+.sn-chips .chip{flex:0 0 auto;white-space:nowrap}
+#scheme-results{display:flex!important;flex-direction:column!important;gap:14px!important}
+#scheme-results>*{margin:0!important}
+.sn-prompt{margin:0!important;line-height:1.5}
+#sn-browse{align-self:flex-start;min-height:48px!important;padding:10px 20px!important}
+.schemes-senior .chip{padding:10px 16px!important}
+
+/* ===== Round 3: simpler food cards, tip/hydration gap ===== */
+#food-panel{display:flex!important;flex-direction:column!important;gap:12px!important}
+#food-panel>*{margin-top:0!important;margin-bottom:0!important}
+#food-panel .stack{margin:0!important}
+
+.meal-simple{padding:14px 16px!important}
+.meal-simple h3{margin:0 0 8px!important;font-size:17px;font-weight:600}
+.meal-simple .meal-portion{font-weight:400;color:#6b7280;font-size:14px}
+.meal-simple p{margin:0 0 4px!important;font-size:15px;line-height:1.4;color:#1f2937}
+.meal-simple .lbl-eat{color:#15803d}
+.meal-simple .lbl-avoid{color:#b91c1c}
+.meal-simple .meal-why-line{color:#6b7280;font-size:14px;margin-top:6px!important;margin-bottom:0!important}
+
+/* Foods to avoid: plain list */
+.avoid-card{background:#fff!important;border:0!important;border-left:0!important;box-shadow:var(--shadow,0 2px 10px rgba(0,0,0,.06))!important;
+  border-radius:16px!important;padding:16px!important;margin-top:4px!important}
+.avoid-icon{display:none!important}
+.avoid-header{margin:0 0 6px!important}
+.avoid-header h3{font-size:17px!important;font-weight:600!important;margin:0!important}
+.avoid-list{gap:0!important}
+.avoid-item{background:none!important;border-radius:0!important;padding:10px 0!important;gap:10px!important;border-bottom:1px solid #eef0f3!important}
+.avoid-item:last-child{border-bottom:0!important}
+.avoid-dot{background:none!important;width:auto!important;height:auto!important;color:#dc2626!important;font-size:13px!important}
+.avoid-text strong{font-size:15px!important;font-weight:600!important;display:block}
+.avoid-text span{font-size:13px!important;color:#6b7280!important}
+.avoid-dot{display:none!important}
+.avoid-text strong::before{content:"\2715\00a0\00a0";color:#dc2626;font-size:12px;font-weight:700}
+.avoid-text span{padding-left:22px}
+
+/* ===== Helper booking: task chips + item builder ===== */
+.task-checks{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important}
+.task-checks .check-chip{display:flex!important;align-items:center;gap:10px;min-height:48px;padding:10px 14px!important;border-radius:14px!important;
+  background:#f1f5f9;border:1.5px solid transparent;font-size:14px;line-height:1.25;cursor:pointer}
+.task-checks .check-chip input[type=checkbox],.item-check input[type=checkbox]{width:20px!important;min-width:20px;height:20px!important;min-height:0!important;
+  flex:0 0 20px;margin:0!important;padding:0!important;border:0;border-radius:6px;accent-color:var(--primary)}
+.task-checks .check-chip:has(input:checked){background:var(--primary-light)!important;color:var(--primary-dark)!important;border-color:var(--primary);font-weight:600}
+#task-item-builders{display:flex;flex-direction:column;gap:10px}
+#task-item-builders:empty{display:none}
+.item-builder{margin:0!important;padding:12px!important;border-radius:14px!important;background:#f8fafc!important;border:1px solid var(--border)!important;box-shadow:none!important}
+.item-builder>strong{display:block;font-size:14px}
+.item-add-row{display:flex!important;gap:8px;margin-top:8px;align-items:stretch}
+.item-add-row .item-input{flex:1 1 auto;min-width:0;width:auto;min-height:44px;box-sizing:border-box;border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;background:#fff;font-size:14px}
+.item-add-row .item-add-btn{flex:0 0 auto;min-height:44px;padding:0 18px;width:auto}
+.item-list{list-style:none;margin:8px 0 0!important;padding:0!important;display:flex;flex-direction:column;gap:6px}
+.item-list:empty{display:none}
+.item-list li{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 8px 8px 12px!important;border:1px solid var(--border)!important;border-radius:10px;background:#fff;font-size:14px}
+.item-list li span{min-width:0;word-break:break-word}
+.item-remove{all:unset;box-sizing:border-box;cursor:pointer;flex:0 0 28px;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;color:var(--danger);font-size:20px;line-height:1;background:var(--danger-light)}
+.item-check{display:flex;align-items:center;gap:10px;padding:6px 0}
+
+/* ===== Healthy Recipes feature ===== */
+.recipe-page{gap:12px!important}
+.recipe-hero{
+  background:linear-gradient(135deg,#ECFEFF,#FEF3C7)!important;
+  margin:0!important;
+  padding:16px!important;
+}
+.recipe-hero-title{margin:0 0 6px!important;font-size:var(--fs-card-title,1.1rem)!important}
+.recipe-hero-text{margin:0!important;color:var(--text-secondary,#64748B);font-size:.95rem;line-height:1.45}
+.recipe-section-title{margin:0 0 10px!important;font-size:var(--fs-card-title,1.05rem)!important;display:flex;align-items:center}
+.recipe-hint{margin:0 0 12px!important;font-size:.9rem;line-height:1.4}
+.recipe-allergy-card,.recipe-filters{margin:0!important}
+.recipe-filter-group{margin-bottom:12px}
+.recipe-filter-label{margin:0 0 8px!important;font-weight:600;font-size:.9rem;color:var(--text-primary)}
+.recipe-chip-row{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:8px!important;
+}
+.recipe-filter-chip{
+  min-height:40px!important;
+  padding:8px 14px!important;
+  font-size:.9rem!important;
+  font-weight:600!important;
+  cursor:pointer!important;
+  border:1.5px solid var(--border,#E2E8F0)!important;
+  background:#fff!important;
+  color:var(--text-primary)!important;
+  border-radius:999px!important;
+}
+.recipe-filter-chip.active{
+  background:var(--primary,#0D9488)!important;
+  color:#fff!important;
+  border-color:var(--primary,#0D9488)!important;
+}
+.recipe-full-btn{width:100%!important;margin-top:4px}
+.recipe-list{gap:12px!important}
+.recipe-count{margin:0 4px!important;font-size:.9rem}
+.recipe-card{cursor:pointer;margin:0!important;padding:14px 16px!important;transition:box-shadow .15s}
+.recipe-card:active{transform:scale(.99)}
+.recipe-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--primary-light,#CCFBF1);
+  color:var(--primary,#0D9488);
+  display:grid;place-items:center;font-size:1.15rem;flex:0 0 44px;
+}
+.recipe-card-body{flex:1;min-width:0}
+.recipe-card-title{margin:0!important;font-size:var(--fs-card-title,1.05rem)!important;line-height:1.3}
+.recipe-card-meta{margin:4px 0 0!important;font-size:.85rem!important}
+.recipe-card-desc{margin:8px 0 0!important;font-size:.9rem;color:var(--text-secondary,#64748B);line-height:1.4}
+.recipe-card-nutrition{margin:8px 0 0!important;font-size:.8rem;color:var(--text-secondary)}
+.recipe-card-action{margin:10px 0 0!important}
+.recipe-card-action .btn{pointer-events:none;padding:8px 14px!important;font-size:.85rem!important;min-height:36px!important;width:auto!important}
+.recipe-empty{text-align:center;padding:24px 16px!important}
+.recipe-disclaimer{margin:8px 4px 16px!important;font-size:.85rem;line-height:1.4}
+.recipe-detail-title{margin:0 0 8px!important;font-size:var(--fs-heading,1.25rem)!important}
+.recipe-detail-desc{margin:0 0 12px!important}
+.recipe-detail-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.recipe-nutrition-box{
+  background:var(--success-light,#DCFCE7)!important;
+  margin-bottom:12px!important;padding:12px!important;box-shadow:none!important;
+}
+.recipe-allergen-box{
+  background:var(--warning-light,#FEF3C7)!important;
+  margin-bottom:12px!important;padding:12px!important;box-shadow:none!important;
+}
+.recipe-nutrition-line,.recipe-allergen-line{margin:6px 0 0!important}
+.recipe-detail-h{margin:12px 0 6px!important;font-size:1rem}
+.recipe-ingredients{margin:0 0 12px!important;padding-left:1.2rem}
+.recipe-steps{margin:0;padding-left:1.2rem;line-height:1.5}
+.recipe-step{margin-bottom:8px}
+.recipe-detail-note{margin:16px 0 0!important;font-size:.85rem}
+
+.senior-mode .recipe-filter-chip{min-height:44px!important;font-size:calc(var(--fs-base,.95rem) * .9)!important;padding:10px 16px!important}
+.senior-mode .recipe-card-title{font-size:var(--fs-card-title)!important}
+.senior-mode .recipe-hero-title{font-size:var(--fs-heading,1.2rem)!important}
+
+.recipe-results-flash{outline:3px solid var(--primary,#0D9488);outline-offset:4px;border-radius:16px;transition:outline .3s}
+#recipe-results{scroll-margin-top:72px}
+
+.recipe-allergy-banner{
+  background:var(--warning-light,#FEF3C7)!important;
+  border:1px solid #F59E0B;
+  margin:0!important;
+  padding:12px 14px!important;
+  font-size:.9rem;
+  line-height:1.4;
+}
+.recipe-allergy-banner-empty{
+  background:var(--primary-light,#CCFBF1)!important;
+  border-color:var(--primary,#0D9488)!important;
+  color:var(--text-secondary,#64748B);
+}
+.recipe-allergy-saved{
+  margin:0 0 10px!important;
+  font-size:.9rem;
+  line-height:1.4;
+  color:var(--text-primary);
+}
+
+
+/* Compact allergy bar */
+.recipe-allergy-compact{margin:0!important;padding:10px 12px!important}
+.recipe-allergy-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.recipe-allergy-label{font-weight:600;font-size:.9rem;margin:0;white-space:nowrap}
+.recipe-allergy-row input{
+  flex:1 1 140px;min-width:0;min-height:40px!important;
+  border:1.5px solid var(--border,#E2E8F0);border-radius:12px;padding:8px 12px;background:#fff;font:inherit
+}
+.recipe-allergy-save{flex:0 0 auto;min-height:40px!important;padding:8px 16px!important;width:auto!important;margin:0!important}
+.senior-mode .recipe-allergy-row input,.senior-mode .recipe-allergy-save{min-height:44px!important}

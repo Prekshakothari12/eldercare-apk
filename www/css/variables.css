@@ -1,0 +1,47 @@
+:root{
+  --primary:#0F766E;
+  --primary-light:#CCFBF1;
+  --primary-dark:#115E59;
+  --accent:#F4A340;
+  --accent-text:#B26A00;
+  --accent-light:#FEF3E2;
+  --success:#16A34A;
+  --success-light:#DCFCE7;
+  --warning:#D97706;
+  --warning-light:#FEF3C7;
+  --danger:#DC2626;
+  --danger-light:#FEE2E2;
+  --bg:#F1F5F9;
+  --surface:#fff;
+  --text-primary:#0F172A;
+  --text-secondary:#475569;
+  --border:#E2E8F0;
+  --senior-bg:#F1F5F9;
+  --senior-text:#0F172A;
+  /* Type scale — nothing below 12px */
+  --fs-xs:12px;
+  --fs-sm:13px;
+  --fs-secondary:14px;
+  --fs-body:16px;
+  --fs-btn:16px;
+  --fs-card-title:18px;
+  --fs-heading:22px;
+  --fs-base:16px;
+  --fs-label:16px;
+  --fs-title:22px;
+  --line:1.5;
+  --shadow:0 2px 8px rgba(0,0,0,.08);
+  --elevated:0 4px 16px rgba(0,0,0,.12);
+  --gap-cards:16px;
+}
+/* Senior view slightly larger */
+.senior-mode{
+  --fs-base:18px;
+  --fs-body:18px;
+  --fs-secondary:15px;
+  --fs-card-title:20px;
+  --fs-heading:26px;
+  --fs-title:26px;
+  --fs-btn:17px;
+  --fs-label:17px;
+}

@@ -1,0 +1,149 @@
+/* Senior mode: teal header, quick-access tiles, bottom tab bar, SOS above the tab bar. */
+.senior-mode{font-family:"Atkinson Hyperlegible","Noto Sans Devanagari",sans-serif;background:var(--senior-bg);color:var(--senior-text);font-size:var(--fs-base);line-height:1.45;overflow-x:clip}
+.senior-mode .page{max-width:520px;margin:0 auto;min-width:0;padding:0 0 calc(72px + 72px + 28px)}
+.senior-mode p,.senior-mode a,.senior-mode button{font-size:var(--fs-base)}
+.senior-mode h1,.senior-mode h2{font-size:var(--fs-title);line-height:1.2;margin:0 0 .4rem}
+.senior-mode .container{padding:16px}
+.senior-mode .card{padding:1rem;border-radius:16px;box-shadow:var(--shadow)}
+
+/* Fixed senior header — greeting + name left, A+/logout white circles right */
+.senior-header{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:14px 16px 16px;padding-right:max(16px, env(safe-area-inset-right));max-width:520px;margin:0 auto;color:#fff;background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:0 0 20px 20px;box-shadow:0 4px 16px rgba(13,148,136,.25)}
+.senior-header .greeting{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px;line-height:1.25}
+.senior-header .greeting small{font-size:calc(var(--fs-base) * .78);opacity:.9;font-weight:500}
+.senior-header .greeting strong{font-size:calc(var(--fs-base) * 1.15);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+.senior-header .greeting .sub{font-size:calc(var(--fs-base) * .72);opacity:.85}
+.senior-actions{display:flex;gap:.5rem;flex:0 0 auto;align-items:center}
+.senior-mode .icon-btn{width:40px;height:40px;border:0;border-radius:50%;background:#fff;color:var(--primary);font-size:1rem;font-weight:700;display:grid;place-items:center;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.12);cursor:pointer}
+.senior-mode .icon-btn.logout-btn{background:transparent;color:#fff;box-shadow:none;font-size:1.15rem}
+.senior-mode .page{padding-top:72px}
+.senior-mode .senior-content{padding-top:16px}
+.call-card{padding:12px 14px !important;border-radius:16px;box-shadow:var(--shadow);margin:0;display:flex;align-items:center;gap:12px;min-height:72px;max-height:88px}
+.call-card-inner{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+.call-card-icon{width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:1.1rem}
+.call-card-text{min-width:0;flex:1}
+.call-card-text h2{margin:0;font-size:var(--fs-card-title,18px);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.call-card-text p{margin:2px 0 0;font-size:var(--fs-secondary,14px);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.call-card-btn{flex:0 0 auto;width:auto !important;min-height:36px !important;padding:8px 14px !important;font-size:14px !important;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px}
+.senior-mode .container > * + *{margin-top:0}
+.senior-mode .grid-home{gap:16px;margin-bottom:16px}
+.senior-mode .hero-card{margin-bottom:16px}
+.senior-mode .helper-status-card{margin-top:0;margin-bottom:16px}
+.senior-mode .stack{gap:16px}
+.senior-mode .card + .card,.senior-mode .section{margin-top:16px}
+.senior-welcome{margin-bottom:12px}
+.senior-welcome .welcome-date{font-size:var(--fs-secondary,15px);color:var(--text-secondary);margin:0}
+.senior-header .icon-btn:not(.logout-btn){background:#fff;color:var(--primary);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.senior-header .icon-btn.logout-btn{background:transparent;color:#fff;box-shadow:none}
+
+
+/* hero: next medicine */
+.senior-mode .hero-card{display:flex;align-items:center;gap:14px;margin-bottom:6px;padding:18px;border-radius:20px;background:linear-gradient(135deg,#ECFEFF,var(--primary-light));box-shadow:var(--shadow)}
+.senior-mode .hero-ic{width:56px;height:56px;flex:0 0 56px;border-radius:16px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:1.5rem}
+.senior-mode .hero-card small{display:block;font-size:calc(var(--fs-base) * .75);color:var(--text-secondary)}
+.senior-mode .hero-card h2{margin:2px 0;font-size:calc(var(--fs-base) * 1.1)}
+.senior-mode .hero-card p{margin:0;font-size:calc(var(--fs-base) * .85);color:var(--text-secondary)}
+
+.senior-mode .section-head{display:flex;align-items:center;justify-content:space-between;margin:22px 4px 10px;font-weight:700;font-size:calc(var(--fs-base) * 1.05)}
+.senior-mode .section-head a{font-size:calc(var(--fs-base) * .78);font-weight:600;color:var(--primary);text-decoration:none;cursor:pointer}
+
+/* quick access tiles */
+.senior-mode .grid-home{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.senior-mode .home-tile{min-width:0;border:0;border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:14px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:10px;color:var(--text-primary);font-weight:700}
+.senior-mode .home-tile .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem}
+.senior-mode .home-tile b{display:block;font-size:calc(var(--fs-base) * .92);line-height:1.2}
+.senior-mode .home-tile small{display:block;margin-top:2px;font-size:calc(var(--fs-base) * .7);font-weight:400;color:var(--text-secondary)}
+.senior-mode .home-tile.sn-tile{grid-column:1/-1;flex-direction:row;align-items:center}
+.t1{background:#CCFBF1;color:#0F766E}.t2{background:#FEE2E2;color:#DC2626}.t3{background:#DBEAFE;color:#2563EB}.t4{background:#FEF3C7;color:#D97706}
+
+/* today's medicines */
+.senior-mode .med{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.senior-mode .med:first-child{padding-top:0}.senior-mode .med:last-child{border-bottom:0;padding-bottom:0}
+.senior-mode .med .mi{width:44px;height:44px;flex:0 0 44px;border-radius:12px;display:grid;place-items:center;background:#FEE2E2;color:#DC2626}
+.senior-mode .med .info{flex:1;min-width:0}
+.senior-mode .med .info b{display:block;font-size:calc(var(--fs-base) * .9)}
+.senior-mode .med .info span{font-size:calc(var(--fs-base) * .75);color:var(--text-secondary)}
+.senior-mode .badge{font-size:calc(var(--fs-base) * .68)}
+.badge.grey{background:#F1F5F9;color:var(--text-secondary)}
+
+/* food guidance */
+.senior-mode .food-row{padding:12px;border-radius:12px;font-size:calc(var(--fs-base) * .85)}
+.senior-mode .food-row+.food-row{margin-top:10px}
+.senior-mode .food-row .label{display:flex;align-items:center;gap:6px;margin-bottom:2px;font-weight:700;font-size:calc(var(--fs-base) * .72);text-transform:uppercase;letter-spacing:.5px}
+.senior-mode .food-eat{background:var(--success-light);color:#166534}
+.senior-mode .food-avoid{background:var(--danger-light);color:#991B1B}
+
+/* bottom tab bar */
+.senior-nav{max-width:520px;left:50%;right:auto;width:100%;transform:translateX(-50%);height:72px;border-top:0;border-radius:20px 20px 0 0;box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:0 4px}
+.senior-nav button{max-width:none;min-width:0;font-size:calc(var(--fs-base) * .7);gap:3px}
+.senior-nav button i{font-size:1.2rem}
+.senior-nav button.active{font-weight:700}
+
+/* SOS floats above the tab bar, bottom right of the app column */
+.floating-sos{position:fixed;right:max(16px,calc(50% - 244px));bottom:calc(72px + 16px);top:auto;transform:none;z-index:9999;width:4.5rem;height:4.5rem;border:3px solid #fff;border-radius:50%;background:var(--danger);color:#fff;font-size:1rem;font-weight:700;display:grid;place-content:center;gap:.125rem;box-shadow:0 .375rem 1.5rem rgba(220,38,38,.35);animation:sos-pulse 2s infinite}
+.senior-mode .floating-sos i{font-size:1.375rem}
+.senior-mode .floating-sos:active{transform:scale(.94)}
+@keyframes sos-pulse{50%{box-shadow:0 .375rem 1.5rem rgba(220,38,38,.35),0 0 0 .75rem rgba(220,38,38,.08)}}
+@media(max-width:22.5rem){.senior-header{padding-left:12px}.senior-mode .container{padding:12px}}
+html.hindi .senior-mode,body.hindi .senior-mode{line-height:1.7}
+#scheme-status{scroll-margin-top:120px}
+.senior-mode a.btn{font-weight:700}
+
+.t5{background:#EDE9FE;color:#6D28D9}.t6{background:#FFEDD5;color:#C2410C}
+
+.senior-welcome{padding:8px 4px 18px}
+.welcome-greet{margin:0;font-size:calc(var(--fs-base) * .95);color:var(--text-secondary);font-weight:500}
+.welcome-name{margin:4px 0 6px;font-size:calc(var(--fs-base) * 1.55);line-height:1.15;color:var(--text-primary)}
+.welcome-date{margin:0;font-size:calc(var(--fs-base) * .85);color:var(--text-secondary)}
+
+.senior-mode .feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:4px 0 22px;
+}
+.senior-mode .feature-tile{
+  min-height:124px;
+  padding:18px 16px;
+  border-radius:20px;
+  box-shadow:0 4px 18px rgba(15,23,42,.08);
+  gap:14px;
+  justify-content:flex-start;
+}
+.senior-mode .feature-tile .ic{width:52px;height:52px;border-radius:16px;font-size:1.4rem}
+.senior-mode .feature-tile b{font-size:calc(var(--fs-base) * 1.02);font-weight:700}
+.senior-mode .today-meds{margin:0 0 16px !important;padding:20px !important;border-radius:20px}
+.senior-mode .helper-status-card{margin-top:4px;padding:18px !important;border-radius:20px}
+
+.sos-family-overlay{
+  position:fixed;inset:0;z-index:20000;
+  background:rgba(127,29,29,.92);
+  display:grid;place-items:center;padding:20px;
+}
+.sos-family-overlay.sos-accepted{background:rgba(6,78,59,.92)}
+.sos-family-card{
+  width:min(420px,100%);background:#fff;border-radius:24px;padding:28px 22px 24px;
+  text-align:center;display:grid;gap:12px;box-shadow:0 16px 40px rgba(0,0,0,.25);
+}
+.sos-family-card h1{margin:0;font-size:1.5rem}
+.sos-need{font-weight:700;font-size:1.05rem;margin:0}
+.sos-family-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.sos-map-btn{width:100%}
+.sos-pulse{
+  width:72px;height:72px;margin:0 auto 4px;border-radius:50%;
+  background:var(--danger);color:#fff;display:grid;place-items:center;
+  font-weight:800;animation:sos-pulse 1.1s ease infinite;
+}
+.sos-pulse.ok{background:var(--success);animation:none}
+.btn-maps{background:#FEF3C7;color:#B45309;border:0;font-weight:700}
+
+/* SENIOR SPACING FIX */
+.senior-mode .container{padding:16px 16px 120px !important}
+.senior-mode .grid-home{gap:16px !important}
+.senior-mode .stack{gap:16px !important}
+.senior-mode .section-head{margin:24px 4px 12px !important}
+.senior-mode .hero-card{margin-bottom:16px !important;padding:20px !important}
+.senior-mode .card{padding:18px !important;border-radius:18px}
+.senior-mode .page{padding-bottom:120px !important}
+.senior-mode .floating-sos{bottom:calc(92px + env(safe-area-inset-bottom,0px)) !important;z-index:40}
+.senior-mode .grid{gap:16px !important}
+
